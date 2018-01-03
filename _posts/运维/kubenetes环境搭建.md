@@ -10,6 +10,7 @@
 docker是整个架构的容器引擎。kubeadm是k8s提供的快速安装工具。kubelet用于操作节点上的docker。
 
 docker可以直接使用官方的安装脚本，kubeadm和kubelet需要私有源进行安装，汇总如下，请按照对应操作系统复制粘贴。
+官方私有源只支持ubuntu和centos，其余发行版使用[luxas/kubeadm-installer](https://github.com/luxas/kubeadm-installer)安装。
 
 ```bash
 # Ubuntu
@@ -41,6 +42,11 @@ EOF
 setenforce 0
 yum install -y kubelet kubeadm
 systemctl enable kubelet && systemctl start kubelet
+
+# 其他发行版，coreos等，需要在最后指定系统
+wget -qO- https://get.docker.com/ | sh
+
+docker run -it -v /etc/cni:/rootfs/etc/cni -v /etc/systemd:/rootfs/etc/systemd -v /opt:/rootfs/opt -v /usr/bin:/rootfs/usr/bin luxas/kubeadm-installer [ubuntu/centos/coreos/debian/fedora]
 ```
 
 ## 初始化节点
@@ -50,5 +56,10 @@ k8s中的节点分为master和node，两者初始化方式相同。
 kubeadm init
 ```
 
-执行以上命令后，如果网络没有被墙的情况下，最新版本的初始化非常流畅，出现问题请看[这里](#)
+执行以上命令后，如果网络没有被墙的情况下，最新版本的初始化非常流畅，出现问题请看[这里](#初始化节点阶段)
 
+
+
+## 问题汇总
+
+#### 初始化节点阶段
