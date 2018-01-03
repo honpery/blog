@@ -1,6 +1,11 @@
-# 基于docker搭建shadowsocks梯子
+---
+title: 基于docker搭建shadowsocks梯子
+tags:
+---
 
-> 本文详细记录了借助docker搭建shadowsocks翻墙服务器的全过程，仅供学习交流使用。
+本文详细记录了借助docker搭建shadowsocks翻墙服务器的全过程，仅供学习交流使用。
+
+<!-- more -->
 
 ## 代理服务器操作
 
