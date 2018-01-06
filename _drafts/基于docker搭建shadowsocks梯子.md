@@ -28,5 +28,3 @@ docker pull mritd/shadowsocks
 # 墙墙专供
 docker pull registry.docker-cn.com/mritd/shadowsocks
 ```
-
-### 
