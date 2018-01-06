@@ -84,7 +84,7 @@ index_with_subtitle: false
 
 # ---------------------------------------------------------------
 # Menu Settings
-# ---------------------------------------------------------------
+#   
 
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash from link value (/archives -> archives).
 # Usage: `Key: /link/ || icon`
@@ -94,9 +94,10 @@ index_with_subtitle: false
 menu:
   home: / || home
   tags: /tags/ || tags
-  categories: /categories/ || th
   archives: /archives/ || archive
+  projects: /projects/ || desktop
   about: /about/ || user
+  # categories: /categories/ || th
   # schedule: /schedule/ || calendar
   # sitemap: /sitemap.xml || sitemap
   # commonweal: /404/ || heartbeat
@@ -293,7 +294,7 @@ highlight_theme: normal
 # Arial | Tahoma | Helvetica | Times New Roman | Courier New | Verdana | Georgia | Palatino | Garamond | Comic Sans MS | Trebuchet MS
 # ---------------------------------------------------------------
 font:
-  enable: false
+  enable: true
 
   # Uri of fonts host. E.g. //fonts.googleapis.com (Default).
   host:
@@ -326,7 +327,7 @@ font:
   # Fallback to `global` font settings.
   logo:
     external: true
-    family:
+    family: Satisfy
     size:
 
   # Font settings for <code> and code blocks.
@@ -361,7 +362,7 @@ baidu_analytics: d89eef5d7b21e10d8af6afec5ecd74e1
 # Disqus
 disqus:
   enable: true
-  shortname:
+  shortname: honpery
   count: true
 
 # Hypercomments
@@ -531,9 +532,9 @@ rating:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: false
-  app_id: #<app_id>
-  app_key: #<app_key>
+  enable: true
+  app_id: Yq1YOE5l60QmmuGkWHF3zgvO-gzGzoHsz
+  app_key: GJR7u4UVA1TEVR8eE0hbicRl
 
 # Another tool to show number of visitors to each article.
 # visit https://console.firebase.google.com/u/0/ to get apiKey and projectId
