@@ -95,7 +95,7 @@ menu:
   home: / || home
   tags: /tags/ || tags
   archives: /archives/ || archive
-  projects: /projects/ || desktop
+  # projects: /projects/ || desktop
   about: /about/ || user
   # categories: /categories/ || th
   # schedule: /schedule/ || calendar
