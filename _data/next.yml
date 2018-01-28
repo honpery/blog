@@ -362,7 +362,7 @@ baidu_analytics: d89eef5d7b21e10d8af6afec5ecd74e1
 # Disqus
 disqus:
   enable: true
-  shortname: honpery
+  shortname: honpery-com
   count: true
 
 # Hypercomments
