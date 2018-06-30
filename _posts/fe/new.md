@@ -66,7 +66,7 @@ this指针是动态的，需要运行时才能知道（箭头函数内部的this
 
 ```js
 function newObj (constructor, args) {
-    const obj = new Object();                   // 创建一个空对象
+    const obj = {};                             // 创建一个空对象
     obj.__proto__ = constructor.prototype;      // 修改__proto__指向原型对象
     constructor.apply(obj, args);               // 修改this指针
     return obj;                                 // 返回新对象
