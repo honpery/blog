@@ -1,11 +1,11 @@
 ---
-title: js中new究竟发生了什么
+title: js中new操作究竟发生了什么
 tags: 前端 js
 categories: 前端
 date: 2018-06-30
 ---
 
-深挖js系列：探究js中new的过程。
+探究js中new的过程。
 
 <!-- more -->
 
@@ -47,7 +47,7 @@ const p = new Person('demo');
 
 构造函数 -> 原型对象：构造函数的prototype属性，指向原型对象。
 原型对象 -> 构造函数：原型对象的constructor属性，指向其构造函数。
-实例 -> 原型对象：实例的__proto__属性，指向其原型对象。
+实例 -> 原型对象：实例的`__proto__`属性，指向其原型对象。
 
 ## this指针
 

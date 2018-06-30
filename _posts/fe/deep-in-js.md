@@ -19,4 +19,4 @@ date: 2018-06-29
 
 ## 目录
 
-- [x] [js中new究竟发生了什么](./new)
+- [x] [js中new究竟发生了什么](./new-operation.md)
