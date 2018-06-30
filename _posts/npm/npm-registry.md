@@ -1,6 +1,6 @@
 ---
 title: 优雅处理npm私有源并用问题
-tags: 前端 npm
+tags: npm
 categories: 前端
 date: 2018-01-06
 ---

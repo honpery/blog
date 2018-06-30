@@ -1,8 +1,8 @@
 ---
 title: js中new操作究竟发生了什么
-tags: 前端 js
+tags: js
 categories: 前端
-date: 2018-06-30
+date: 2018-06-30 12:00:00
 ---
 
 探究js中new的过程。
