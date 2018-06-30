@@ -72,3 +72,7 @@ function newObj (constructor, args) {
     return obj;                                 // 返回新对象
 }
 ```
+
+## 小结
+
+说到底，new包含四个过程，创建新对象，设置`__proto__`属性，绑定this，返回该对象。

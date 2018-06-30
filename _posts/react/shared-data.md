@@ -173,3 +173,7 @@ React提倡的单向数据流，更多的是为了调试与维护的时候，更
 ## 小结
 
 可以看到，更多的还是利用props的单向传递进行通信，观察者模式尽量少用，这是反范式的。
+
+## 参考资料
+
+- [React 组件间通讯](http://taobaofed.org/blog/2016/11/17/react-components-communication/)
