@@ -5,8 +5,7 @@ tags: React
 date: 2018-06-30 17:07:12
 ---
 
-React组件之间通信的方式
-
+<p></p>
 <!-- more -->
 
 ## 概述
@@ -26,8 +25,6 @@ function Child (props) {
     return <p>{props.name}</p>;
 }
 ```
-
-如果跨级传输，可以在中间组件，利用ES6中的`展开操作符...`，起透传作用。
 
 ```jsx
 function Parent () {
@@ -69,11 +66,51 @@ function Child (props) {
 }
 ```
 
-跨级传输也可通过展开操作符。
+## 跨级组件
+
+跨级组件可以通过以上两种方式，每一级均把属性向下传，也可以使用es6新增的`...`操作符。
+
+```jsx
+function A () {
+    return <B name="demo" />;
+}
+
+function B (props) {
+    return <C {...props} />;
+}
+
+function C (props) {
+    return <p>{props.name}</p>;
+}
+```
+
+还有一种方式是通过16.3重构后的Context API来共享状态。
+
+```jsx
+const {Provider, Consumer} = createContext({
+    name: 'default',
+});
+
+function A () {
+    return (
+        <Provider value={{name: 'demo'}}>
+            <B />
+        </Provider>
+    )
+}
+
+function B () {
+    return (
+        <Consumer>
+            {ctx => <p>{ctx.name}</p>}
+        </Consumer>
+    )
+}
+```
 
 ## 兄弟组件：提升父组件
 
-可以利用上述两种情况，通过同一父组件进行传递。
+可以通过同一父组件进行传递。
 
 ```jsx
 class Parent extends React.Component {
@@ -106,6 +143,8 @@ function Child2 (props) {
 - 父组件状态变动，会导致所有子组件走对应的生命周期。
 - 若只为通信而创建父组件，此组件有些多余，到了层次复杂。
 - 层次较深时层层传递很蛋疼。
+
+也可以通过Context API实现，方法同跨级组件。
 
 ## 万能大法：观察者模式
 
