@@ -66,25 +66,9 @@ function Child (props) {
 }
 ```
 
-## 跨级组件
+## 跨级组件：Context
 
-跨级组件可以通过以上两种方式，每一级均把属性向下传，也可以使用es6新增的`...`操作符。
-
-```jsx
-function A () {
-    return <B name="demo" />;
-}
-
-function B (props) {
-    return <C {...props} />;
-}
-
-function C (props) {
-    return <p>{props.name}</p>;
-}
-```
-
-还有一种方式是通过16.3重构后的Context API来共享状态。
+可以使用React 16.3提供的新版Context API来传递数据。
 
 ```jsx
 const {Provider, Consumer} = createContext({
